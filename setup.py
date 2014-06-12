@@ -1,12 +1,12 @@
 from setuptools import setup, find_packages
 
 VERSION = 0.1
-README = open('README.md')
+README = open('README.rst')
 
 setup(
     name="ReQLAstrology",
         version=VERSION,
-    description="An Object-Document Mapper for RethinkDB",
+    description="An Object-D_ocument Mapper for RethinkDB",
     author="Josh Kuhn",
     author_email="deontologician@gmail.com",
     url="deontologician.github.io/ReQLAstrology",
@@ -27,5 +27,8 @@ setup(
     ],
     install_requires=[
         "rethinkdb==1.12.0-2",
-    ]
+    ],
+    scripts=[
+        'tests/test_reqlastrology.py',
+    ],
 )
